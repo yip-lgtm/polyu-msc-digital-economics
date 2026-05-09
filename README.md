@@ -1,9 +1,10 @@
 # PolyU MSc Digital Economics — 12-Week Self-Study Portfolio
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Progress-Week%200%2F12-blue" alt="Progress">
+  <img src="https://img.shields.io/badge/Progress-Week%201%2F12-blue" alt="Progress">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
   <img src="https://img.shields.io/badge/Web3-Hong%20Kong-purple" alt="Web3 HK">
+  <img src="https://img.shields.io/badge/Week%201-AF5637%20Microeconomics-brightgreen" alt="Week 1 Complete">
 </p>
 
 **目標：** 12週完成 PolyU MSc (Applied Economics / Digital Economics) 等效技能  
@@ -14,17 +15,25 @@
 
 ## 📚 12-Week Study Plan
 
-| Weekend | Subject | 資源 | 完成指標 |
-|---------|---------|------|----------|
-| 1–2 | Microeconomics | MIT OCW 14.01SC | Supply/Demand → Game Theory |
-| 3–4 | Macroeconomics | MIT OCW 14.02 | AD-AS + 香港GDP |
-| 5 | International Economics | MIT OCW 14.54 | Trade model + AI case |
-| 6–7 | Digital Economics | 西南財經MOOC + Coursera | 平台經濟 + 數據價值化 |
-| 8 | Ethics | Coursera | 500字reflection + certificate |
-| 9 | AI Concepts | Andrew Ng AI For Everyone | AI mindmap |
-| 10 | Metaverse Economics | Brookings papers | Ecosystem mindmap |
-| 11 | Econometrics | MIT OCW + Coursera | Regression model (Python) |
-| **12** | **Capstone** | **ICT Lectures + OpenClaw** | **Paper + GitHub Portfolio + AI Agent** |
+| Weekend | Subject | 資源 | 完成指標 | Status |
+|---------|---------|------|----------|--------|
+| 1–2 | AF5637 Microeconomics 微觀經濟學 | MIT OCW 14.01SC | Supply/Demand → Game Theory | ✅ Week 1 Done |
+| 3–4 | AF5638 Macroeconomics 宏觀經濟學 | MIT OCW 14.02 | AD-AS + 香港GDP | — |
+| 5 | AF5642 + AF5645 (Part 1) | MIT OCW 14.54 + Coursera | Trade model + AI case | — |
+| 6–7 | AF5645 (Part 2) + AF5644 | 西南財經MOOC + Coursera | 平台經濟 + 數據價值化 | — |
+| 8 | AF5T21 + AF5644 | Coursera Business Ethics | 500字reflection + certificate | — |
+| 9 | COMP5511 AI Concepts | Andrew Ng AI For Everyone | AI mindmap | — |
+| 10 | AF5640 Metaverse Economics | Brookings papers | Ecosystem mindmap | — |
+| 11 | AF5641 Econometrics | MIT OCW + Coursera | Regression model (Python) | — |
+| **12** | **AF5944 Capstone** | **ICT Lectures + OpenClaw** | **Paper + GitHub Portfolio + AI Agent** | — |
+
+---
+
+## 🏆 Completed Milestones
+
+| Week | Subject | Completion Date | Evidence |
+|------|---------|----------------|----------|
+| Week 1 | AF5637 Microeconomics | May 9, 2026 | Unit 1–5 Notes + Problem Sets + HK Case Study |
 
 ---
 
@@ -45,23 +54,15 @@ polyu-msc-digital-economics/
 ├── .gitignore
 ├── requirements.txt
 ├── polyu_msc_plan.md
-├── assets/
 ├── Week01_Microeconomics/
-├── Week02_Microeconomics/
+│   ├── AF5637_Unit1-5_Study_Guide.md ✅
+│   ├── SupplyDemand_HK_Case.ipynb ✅
+│   └── completion.md
+├── Week02_Microeconomics/ ← Next!
 ├── Week03-04_Macroeconomics/
-├── Week05_International/
-├── Week06-07_Digital_Economics/
-├── Week08_Ethics/
-├── Week09_AI_Concepts/
-├── Week10_Metaverse/
-├── Week11_Econometrics/
+├── ...
 └── Week12_Capstone/
-    ├── Research_Paper_8-12pages.docx
-    ├── Python_ICT_Dashboard_V2.py
     ├── OpenClaw_AI_Trading_Agent/
-    │   ├── skills/
-    │   ├── signals_json/
-    │   └── agent_logs/
     └── ICT_Dashboard_Results/
 ```
 
