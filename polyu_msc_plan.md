@@ -12,39 +12,19 @@
 
 ---
 
-## 📅 WEEKEND SCHEDULE
+## 📚 12-WEEK STUDY PLAN — 官方 PolyU 科目
 
 | Weekend | Phase | Subject | Main Resources | Task | Milestone |
 |---------|-------|---------|----------------|------|-----------|
-| 1–2 | Foundation | AF5637 Microeconomics 微觀經濟學 | MIT OCW 14.01SC | 看4–5 Unit + 筆記 + Problem Set | Supply/Demand → Game Theory 所有習題 |
-| 3–4 | Foundation | AF5638 Macroeconomics 宏觀經濟學 | MIT OCW 14.02 | 看4–5 Unit + 畫AD-AS圖 + 香港GDP案例 | 掌握 GDP、Inflation、Monetary/Fiscal Policy |
-| 5 | International + Managerial | AF5642 International Economics + AF5645 (Part 1) | MIT OCW 14.54 + Coursera | Trade model + AI對企業 case study | 寫1頁「香港數字轉型」報告 |
-| 6–7 | Digital Core | AF5645 (Part 2) + AF5644 Advanced Topics in Digital Economics | 西南財經大學《數字經濟學》MOOC + Coursera Economics of AI | 每週末2–3章（平台經濟、數據價值化） | 完成quiz + 香港Digital Economy case study |
-| 8 | Ethics + Digital Core | AF5T21 Academic Integrity & Ethics + AF5644 完結 | Coursera Business Ethics + MOOC | Ethics + Digital Economics 總結 | 寫500字reflection + 拿certificate |
-| 9 | Core Elective 1 | COMP5511 Artificial Intelligence Concepts | Coursera AI For Everyone – Andrew Ng | 完成4 module + AI應用討論 | 建1個mini AI use-case mindmap |
-| 10 | Core Elective 2 | AF5640 Metaverse Economics and Ecosystems | Brookings Metaverse papers + Cathy Hackl | 讀3–4篇論文 + 商業模式研究 | 畫1個Metaverse Ecosystem mindmap |
-| 11 | Free Elective | AF5641 Econometrics for Data Analysis | MIT OCW Econometrics + Coursera | Regression + Google Colab Python練習 | 完成1個regression model（AI對就業影響） |
-| 12 | Capstone | AF5944 Research Project in Digital Economics | ICT Lectures + OpenClaw.ai + CoinGecko API | Paper + GitHub + OpenClaw Agent + Python Dashboard | 8–12頁 Research Paper + 完整 GitHub Portfolio |
-
----
-
-## 📚 WEEK 12 CAPSTONE — Research Paper Template
-
-### Paper 題目（中英雙語）
-
-**英文：** Applying Inner Circle Trader (ICT) Smart Money Concepts with OpenClaw AI Trading Agent to Hong Kong's Digital Economy and Web3 Markets: Bridging Traditional Finance, Digital Asset Strategies and Autonomous Execution
-
-**中文：** ICT Smart Money Concepts 結合 OpenClaw AI Trading Agent 於香港數字經濟及 Web3 市場的應用 — 從傳統金融、數字資產交易策略到自主執行
-
-### 大綱結構（8–12 頁 Word）
-
-1. **Introduction** (1 頁)
-2. **Literature Review** (2 頁)
-3. **Theoretical Framework: ICT Smart Money Concepts + OpenClaw Agent Architecture** (2 頁)
-4. **Analysis: ICT + OpenClaw in Hong Kong Crypto & Web3** (3–4 頁)
-5. **Case Study & Python Empirical Analysis + OpenClaw Deployment** (2 頁)
-6. **Conclusion & Policy Recommendations** (1 頁)
-7. **References & Appendix**
+| 1–2 | Foundation | **AF5637** Microeconomics 微觀經濟學 | MIT OCW 14.01SC | 看4–5 Unit + 筆記 + Problem Set | Supply/Demand → Game Theory 所有習題 |
+| 3–4 | Foundation | **AF5638** Macroeconomics 宏觀經濟學 | MIT OCW 14.02 | 看4–5 Unit + 畫AD-AS圖 + 香港GDP案例 | 掌握 GDP、Inflation、Monetary/Fiscal Policy |
+| 5 | International + Managerial | **AF5642** International Economics + **AF5645** (Part 1) 國際經濟 + 管理經濟與數字轉型 | MIT OCW 14.54 + Coursera Digital Transformation (audit) | Trade model + AI對企業 case study | 寫1頁「香港數字轉型」報告 |
+| 6–7 | Digital Core | **AF5645** (Part 2) + **AF5644** Advanced Topics in Digital Economics 管理經濟與數字轉型 + 數字經濟學進階 | 西南財經大學《數字經濟學》MOOC + Coursera Economics of AI | 每週末2–3章（平台經濟、數據價值化） | 完成quiz + 香港Digital Economy case study |
+| 8 | Ethics + Digital Core | **AF5T21** Academic Integrity and Ethics in Business + **AF5644** 完結 商業道德與學術誠信 + 數字經濟學進階 | Coursera Business Ethics + MOOC | Ethics + Digital Economics 總結 | 寫500字 reflection + 拿 certificate |
+| 9 | Core Elective 1 | **COMP5511** Artificial Intelligence Concepts 人工智能概念 | Coursera AI For Everyone – Andrew Ng | 完成4 module + AI應用討論 | 建1個mini AI use-case mindmap |
+| 10 | Core Elective 2 | **AF5640** Metaverse Economics and Ecosystems 元宇宙經濟與生態 | Brookings Metaverse papers + Cathy Hackl YouTube | 讀3–4篇論文 + 商業模式研究 | 畫1個Metaverse Ecosystem mindmap |
+| 11 | Free Elective | **AF5641** Econometrics for Data Analysis 計量經濟學數據分析 | MIT OCW Econometrics + Coursera | Regression + Google Colab Python練習 | 完成1個regression model（AI對就業影響） |
+| 12 | Capstone | **AF5944** Research Project in Digital Economics 數字經濟學研究項目 | ICT Lectures + OpenClaw.ai + CoinGecko API | Paper + GitHub + OpenClaw Agent + Python Dashboard | 8–12頁 Research Paper + 完整 GitHub Portfolio |
 
 ---
 
@@ -254,4 +234,4 @@ fig.show()
 
 ---
 
-*Last updated: 2026-05-07*
+*Last updated: 2026-05-09*
