@@ -1,182 +1,181 @@
-# ICT Trading Rules — OpenClaw AI Trading Agent
+# ICT Trading Rules
 
-This document specifies the **Inner Circle Trader (ICT) Smart Money Concepts** rules implemented in the OpenClaw agent. These rules transform discretionary institutional trading logic into deterministic, auditable decision criteria.
-
----
-
-## 1. Fair Value Gap (FVG) — Rules
-
-### Definition
-A **Fair Value Gap** is a three-candle pattern where the high of the first candle and the low of the third candle do not overlap, creating an imbalance that the market tends to revisit.
-
-### Detection Rules
-- **Bullish FVG:** `candle[0].high < candle[2].low`
-- **Bearish FVG:** `candle[0].low > candle[2].high`
-- **Minimum gap size:** 0.5% of price
-- **Maximum age:** 14 days (then invalidated)
-- **Volume confirmation:** Required (1.2x 20-day average)
-
-### Validity Criteria
-- ✅ Unmitigated (price has not yet returned to fill the gap)
-- ✅ Aligned with higher-timeframe bias
-- ✅ Within higher-timeframe discount array (for longs) or premium array (for shorts)
+This document defines the trading rules used by the **OpenClaw AI Trading Agent**. The rules are based on **Inner Circle Trader (ICT) Smart Money Concepts**, with additional filters designed for clarity, risk control, and suitability in regulated trading environments such as **Hong Kong's VASP framework**.
 
 ---
 
-## 2. Order Block (OB) — Rules
+## 1. Overview
 
-### Definition
-An **Order Block** is the **last opposing candle** before a strong directional move, representing institutional entry or exit zones.
+The agent follows a **confluence-based approach**. A trade signal is only considered valid when multiple ICT concepts align. The primary objective is to identify **high-probability institutional order flow zones** rather than chasing every market move.
 
-### Detection Rules
-- **Bullish OB:** Last bearish candle before a strong bullish move
-- **Bearish OB:** Last bullish candle before a strong bearish move
-- **Minimum displacement:** 1.0 x ATR
-- **Minimum volume:** 1.5x 20-day average
-- **Confirmation:** FVG must be created after the OB
+### Core Philosophy
 
-### Validity Criteria
-- ✅ Displacement confirmed (ATR > 1.0)
-- ✅ Volume profile (OB candle has high volume)
-- ✅ Unmitigated (price has not yet returned to OB zone)
+- **Trade in the direction of institutional order flow** (Smart Money).
+- **Wait for clear liquidity engineering** and market structure confirmation.
+- **Prioritise confluence over frequency.**
 
 ---
 
-## 3. Liquidity Sweep — Rules
+## 2. Core ICT Concepts Used
 
-### Definition
-A **Liquidity Sweep** (or Liquidity Grab) is a temporary price excursion beyond a key level, designed to trigger retail stop losses before the true directional move.
-
-### Detection Rules
-- **Key levels:** Previous day high/low, swing highs/lows, equal highs/lows
-- **Minimum sweep depth:** 0.3% beyond the level
-- **Reversal confirmation:** 3 candles after the sweep
-- **Volume:** Decreasing volume on the sweep, increasing on reversal
-
-### Validity Criteria
-- ✅ Sweep reaches beyond liquidity level
-- ✅ Reversal confirmed within 3 candles
-- ✅ HTF bias aligns with reversal direction
+| Concept | Definition | Role in the Agent |
+|---------|------------|-------------------|
+| **Order Block (OB)** | The last opposing candle before a strong impulsive move | Key entry zone |
+| **Fair Value Gap (FVG)** | Imbalance created during rapid price movement that price tends to revisit | Entry trigger / confirmation |
+| **Liquidity Grab** | Temporary price movement to sweep stop losses or induce retail participation | Confirmation of institutional intent |
+| **Discount / Premium Array** | Price trading below (discount) or above (premium) the equilibrium | Bias filter |
+| **Market Structure** | Break of Structure (BOS) and Change of Character (CHOCH) | Higher-timeframe direction |
 
 ---
 
-## 4. Confluence Rules (FVG + OB)
+## 3. Entry Rules (Confluence Required)
 
-The most high-probability setups combine **FVG + OB alignment**:
+A valid long setup must meet **at least 3 of the following 5 conditions**:
 
-### Long Setup
-1. Higher-timeframe bias: **Bullish**
-2. Price in HTF **discount array** (0.5 - 0.79 of range)
-3. **Bullish FVG** detected (unmitigated)
-4. **Unmitigated bullish OB** identified within or near the FVG
-5. Risk:Reward ratio ≥ 2.0
-6. Session: London or NY overlap
-7. No major news in next 30 minutes
+1. **Bullish Order Block** present and unmitigated (price has not returned to fill the block).
+2. **Bullish Fair Value Gap (FVG)** formed, and price is trading within or just above the FVG.
+3. **Price is trading in a discount array** relative to the higher-timeframe equilibrium.
+4. **A Liquidity Grab** (equal highs or stop hunt below recent lows) has recently occurred.
+5. **Higher-timeframe market structure is bullish** (Break of Structure to the upside).
 
-### Short Setup
-1. Higher-timeframe bias: **Bearish**
-2. Price in HTF **premium array** (0.79 - 1.0 of range)
-3. **Bearish FVG** detected (unmitigated)
-4. **Unmitigated bearish OB** identified within or near the FVG
-5. Risk:Reward ratio ≥ 2.0
-6. Session: London or NY overlap
-7. No major news in next 30 minutes
+A valid short setup follows the **inverse** of the above conditions.
+
+### Additional Filters
+
+- Only consider setups that align with the **higher-timeframe (4H / Daily) bias**.
+- Avoid trading during major news events or low liquidity periods (e.g., weekends for certain assets).
+- **Minimum confluence score of 3/5** is required before the agent considers execution.
 
 ---
 
-## 5. Entry Rules
+## 4. Risk Management Rules
 
-### Entry Trigger
-- Price reaches FVG midpoint (50% level)
-- Confirmation candle closes in expected direction
-- Volume confirms the move (1.2x 20-day average)
-
-### Position Sizing
-- **Method:** Fractional Kelly Criterion (1/4 Kelly)
-- **Formula:** `position_size = (kelly_fraction × edge / odds) × portfolio`
-- **Cap:** 10% of portfolio per position
-- **Total cap:** 30% portfolio exposure
-
----
-
-## 6. Exit Rules
-
-### Stop Loss
-- **Type:** ATR-based
-- **ATR period:** 14
-- **ATR multiplier:** 1.5
-- **Placement:** Below OB low (for long) / Above OB high (for short)
-
-### Take Profit (3 levels)
-- **TP1:** 1.0R (close 33% of position)
-- **TP2:** 2.0R (close 33% of position)
-- **TP3:** 3.0R (close 34% of position, runner)
-
-### Stop Management
-- Move stop to breakeven after TP1 hit
-- Trail stop using 1.0 ATR after TP2 hit
+| Rule | Description | Default Setting |
+|------|-------------|-----------------|
+| **Position Sizing** | Risk no more than 0.5%–1% of account per trade (Fractional Kelly 1/4) | 0.75% (1/4 Kelly) |
+| **Stop Loss Placement** | Below the Order Block (long) / Above the Order Block (short) | 1–1.5× ATR |
+| **Take Profit** | Minimum 1:2 Risk-Reward ratio | 1:2.5 |
+| **Maximum Daily Loss** | Stop trading for the day if daily loss exceeds 2% | 2% |
+| **Maximum Weekly Loss** | Reduce position size 50% if weekly loss exceeds 5% | 5% |
+| **Maximum Monthly Loss** | Stop trading for rest of month if monthly loss exceeds 10% | 10% |
+| **Maximum Open Positions** | Limit concurrent open positions | 2-3 |
+| **Auto-pause Drawdown** | Pause trading if drawdown from peak exceeds 8% | 8% |
 
 ---
 
-## 7. Session Filters
+## 5. Exit & Trade Management Rules
 
-### Preferred Sessions
+### Partial Profit Taking
+
+- **50% close** at **1:1.5 Risk-Reward** → Move stop loss to breakeven.
+
+### Full Exit (3 TP Levels)
+
+- **TP1:** 1.0R → Close 33% of position
+- **TP2:** 2.0R → Close 33% of position, trail stop using 1.0 ATR
+- **TP3:** 3.0R → Close 34% (runner) or trail with 1.5 ATR
+
+### Alternative Full Exit
+
+- Close remaining position at **1:2.5 Risk-Reward** or when price reaches the opposing Order Block / FVG.
+
+### Invalidation
+
+- Exit immediately if price **closes strongly beyond the Order Block in the opposite direction** (indicating mitigation or failed setup).
+
+### Time-based Exit
+
+- If a trade remains open for **more than 48 hours** without reaching target or invalidation, reassess and consider manual exit.
+
+---
+
+## 6. Session Filters
+
+### Preferred Sessions (Higher Liquidity)
+
 - **London:** 08:00-12:00 UTC
 - **New York:** 13:00-17:00 UTC
 - **London/NY Overlap:** 13:00-17:00 UTC (best liquidity)
 
 ### Avoid Sessions
+
 - **Asia (low volume):** 00:00-08:00 UTC
 - **Sunday open:** Limited setups
 - **Friday close:** Close all positions before 20:00 UTC
 
 ---
 
-## 8. News & Event Filters
+## 7. News & Event Filters
 
 ### No-Trade Windows
-- 30 minutes before major economic releases
-- 30 minutes after major economic releases
+
+- **30 minutes** before major economic releases
+- **30 minutes** after major economic releases
 - FOMC, ECB, BOJ meetings
 - CPI, NFP, GDP releases
 - Crypto-specific: Exchange maintenance, regulatory announcements
 
 ---
 
-## 9. Risk Management Rules
+## 8. Compliance & Audit
 
-### Position Limits
-- **Max position size:** 10% of portfolio
-- **Max total exposure:** 30% of portfolio
-- **Max open positions:** 3 simultaneously
+### Audit Trail Requirements
 
-### Loss Limits
-- **Daily loss limit:** 2% of portfolio → Pause trading
-- **Weekly loss limit:** 5% of portfolio → Reduce position size 50%
-- **Monthly loss limit:** 10% of portfolio → Stop trading for rest of month
+- **Every decision** logged with timestamp + reasoning chain
+- **Trade records** preserved for 7 years (per SFC requirement)
+- **LIME/SHAP explainability** for trade rationale
+- **PDPO compliance:** No PII collected
 
-### Drawdown Protection
-- **Auto-pause trigger:** 8% drawdown from peak
-- **Reactivation:** Manual review required
+### Deterministic & Auditable
+
+- All rules are designed to be **deterministic and auditable**
+- Suitable for **SFC VASP regulatory inspection**
+- Modularity allows **independent testing** of each component (Perception, Reasoning, Action)
 
 ---
 
-## 10. Audit & Logging
+## 9. Notes & Future Improvements
 
-### Every Trade Must Log
-- **Signal ID** (from JSON)
-- **Entry/exit prices** and timestamps
-- **Position size** and risk taken
-- **Reasoning chain** (which rules passed/failed)
-- **P&L** (realised and unrealised)
-- **HTF context** at time of trade
-- **Session** and market conditions
+### Current Design (Paper Trading)
 
-### Retention
-- All trade logs: **7 years** (per SFC requirement)
-- Decision logs: **7 years**
-- Performance metrics: **Permanent**
+- Current rules are intentionally conservative to suit paper trading and regulatory compliance.
+- All rules are designed to be deterministic and auditable.
+
+### Future Versions Will Include
+
+- **Dynamic position sizing** based on signal strength
+- **Multi-timeframe confirmation** scoring (4H + Daily + Weekly)
+- **Session-based filters** (e.g., London / New York kill zones)
+- **Sentiment analysis** integration (Twitter/X, news APIs)
+- **On-chain data integration** for Web3-native assets
+- **Reinforcement learning** for adaptive parameter tuning
+
+---
+
+## 10. Quick Reference Card
+
+```
+ENTRY (Long)          EXIT
+─────────             ─────────
+✓ Bullish OB          TP1: 1R → 33%
+✓ Bullish FVG         TP2: 2R → 33%
+✓ Discount array      TP3: 3R → 34%
+✓ Liquidity grab      SL: Below OB (1.5 ATR)
+✓ HTF Bullish         Time: Max 48h
+                      Invalid: Close below OB
+
+RISK MANAGEMENT
+─────────
+• Position: 0.75% (1/4 Kelly)
+• Daily: -2% → Stop
+• Weekly: -5% → Reduce
+• Monthly: -10% → Stop
+• Drawdown: -8% → Auto-pause
+• Max Positions: 2-3
+```
 
 ---
 
 *Rules aligned with ICT methodology + HK VASP regulatory requirements*
+
+**Version:** 2.1.0 | **Last Updated:** 2026-06-06 | **Author:** Saba Yip
