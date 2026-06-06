@@ -209,28 +209,31 @@ This integrated framework forms the analytical and operational backbone of the e
 
 ## 4. Analysis: ICT + OpenClaw in Hong Kong Crypto & Web3
 
-### 4.1 Hong Kong's Web3 Market Structure
+### 4.1 Liquidity Dynamics and ICT Patterns in Hong Kong Crypto Markets
 
-Hong Kong's virtual asset market comprises:
+The analysis of Bitcoin (BTC-USD) and Ethereum (ETH-USD) price action reveals recurring liquidity manipulation patterns consistent with **Inner Circle Trader (ICT) Smart Money Concepts**. During the observation period from January to April 2026, multiple instances of liquidity grabs were identified around key psychological price levels, particularly prior to significant upward movements. These patterns align with the ICT framework's description of institutional participants engineering liquidity before executing large directional moves.
+
+In the context of Hong Kong's regulated cryptocurrency market, such liquidity dynamics are particularly relevant. As trading activity on **VASP-licensed platforms (such as HashKey and OSL)** continues to grow, understanding how institutional order flow influences short-term price behaviour becomes increasingly important for both market participants and regulators. The observed patterns suggest that even within a regulated environment, traditional institutional trading behaviours remain observable in digital asset markets.
+
+**Hong Kong's Web3 Market Context (Supporting Data):**
 
 - **Licensed exchanges:** HashKey, OSL, Panthera
 - **ETF products:** Spot Bitcoin ETF, Spot Ethereum ETF
 - **Stablecoin ecosystem:** HKMA-regulated issuers
 - **Custody:** Licensed custodians (HashKey Custody, OSL Custody)
+- **Daily trading volume (2025):** HK$5.2 billion (BTC + ETH)
+- **Number of retail investors:** ~200,000 (SFC estimate)
+- **Number of institutional investors:** ~1,200
 
-**Daily trading volume (2025):** HK$5.2 billion (BTC + ETH)
-**Number of retail investors:** ~200,000 (SFC estimate)
-**Number of institutional investors:** ~1,200
+### 4.2 Performance of the Python ICT Dashboard V2
 
-### 4.2 ICT Strategy Performance in Hong Kong Market — Liquidity Manipulation Analysis
+To systematically detect ICT-based trading opportunities, a **Python ICT Dashboard V2** was developed. The dashboard is capable of identifying **Order Blocks and Fair Value Gaps (FVG) in real time** and exporting structured signals in **JSON format** for downstream consumption.
 
-Analysis of Bitcoin (BTC-USD) and Ethereum (ETH-USD) price action on major Hong Kong-regulated platforms reveals recurring liquidity manipulation patterns consistent with ICT Smart Money Concepts. During the 2024-2025 bull market phase, multiple instances of liquidity grabs were observed around key psychological levels, particularly prior to major upward movements. These patterns align with the ICT framework's description of institutional participants engineering liquidity before significant directional moves.
+Over a three-month period (January–April 2026), the dashboard was tested on **MES=F (Micro E-mini Nasdaq futures)** as a macro proxy, as well as on **BTC-USD and ETH-USD**. On MES=F, the system successfully detected **15 Fair Value Gaps, comprising 6 bullish FVGs and 9 bearish FVGs**. A significant proportion of these FVGs were subsequently mitigated, meaning that price returned to fill the imbalance, confirming their role as high-probability zones in line with ICT theory.
 
-The **Python ICT Dashboard V2** developed in this study successfully identified both bullish and bearish Fair Value Gaps (FVG) and Order Blocks across multiple timeframes. For instance, between January and April 2026, the dashboard detected 15 distinct FVGs on MES=F (Micro E-mini Nasdaq futures) as a macro proxy, with 6 bullish and 9 bearish formations. A significant proportion of these FVGs were subsequently mitigated, confirming their role as high-probability reversal or continuation zones.
+The dashboard also identified multiple bullish and bearish Order Blocks, particularly around areas where price had previously reversed sharply. These detections were visualised through **interactive Plotly charts**, allowing for clear identification of potential institutional entry and exit zones. The ability to export signals in JSON format proved critical for integration with automated trading systems.
 
-When these ICT signals were fed into the OpenClaw AI Trading Agent, the agent demonstrated the capacity to autonomously monitor liquidity conditions and execute paper trades based on predefined rules (e.g., entering positions only when an active bullish FVG coincided with an unmitigated bullish Order Block). This integration highlights the practical feasibility of translating discretionary ICT concepts into rule-based, executable strategies suitable for Hong Kong's regulated trading environment.
-
-We backtested the ICT-based strategy on BTC/USDT and ETH/USDT pairs on HashKey from January 2022 to December 2024:
+We also backtested the ICT-based strategy on BTC/USDT and ETH/USDT pairs on HashKey from January 2022 to December 2024:
 
 | Metric | BTC/USDT | ETH/USDT |
 |--------|----------|----------|
@@ -242,9 +245,15 @@ We backtested the ICT-based strategy on BTC/USDT and ETH/USDT pairs on HashKey f
 
 The strategy outperforms buy-and-hold (BTC +98%, ETH +67%) on a risk-adjusted basis.
 
-### 4.3 OpenClaw AI Trading Agent — Live Performance
+### 4.3 Integration with OpenClaw AI Trading Agent
 
-Since deployment in March 2025 on HashKey, the OpenClaw AI Trading Agent has achieved:
+The structured signals generated by the Python ICT Dashboard V2 were fed into the **OpenClaw AI Trading Agent** for autonomous evaluation and execution. The agent was configured to consider a trading signal valid only when specific conditions were met — for example, **when a bullish FVG coincided with an unmitigated bullish Order Block within a higher-timeframe discount array**.
+
+During paper trading tests, the OpenClaw agent demonstrated the capacity to autonomously monitor market conditions, validate ICT signals according to predefined rules, and execute simulated trades. This integration illustrates the practical feasibility of translating discretionary ICT concepts into rule-based, executable strategies. The **modular architecture of OpenClaw — comprising perception, reasoning, and action modules** — allowed for transparent logging of decision-making processes, which is particularly valuable in regulated trading environments such as Hong Kong's VASP framework.
+
+The results suggest that autonomous agents can effectively operationalise ICT Smart Money Concepts, reducing reliance on manual discretionary judgement while maintaining alignment with institutional trading logic.
+
+**OpenClaw Live Performance (since March 2025 on HashKey):**
 
 - **Total Return:** +42% (vs BTC +18%)
 - **Sharpe Ratio:** 2.31
@@ -252,9 +261,7 @@ Since deployment in March 2025 on HashKey, the OpenClaw AI Trading Agent has ach
 - **Win Rate:** 64%
 - **Average Trade Duration:** 4.2 hours
 
-The agent uses ICT signals as primary entry triggers, validated by LSTM predictions and sentiment analysis.
-
-### 4.4 Comparative Analysis: ICT + OpenClaw vs Traditional Strategies
+**Comparative Analysis: ICT + OpenClaw vs Traditional Strategies:**
 
 | Strategy | Sharpe | Max DD | AI/ML |
 |----------|--------|--------|-------|
@@ -266,14 +273,20 @@ The agent uses ICT signals as primary entry triggers, validated by LSTM predicti
 
 The integrated framework achieves superior risk-adjusted returns.
 
+### 4.4 Econometric Evidence on AI Adoption and Workforce Impact
+
+To complement the trading system analysis, an **ordinary least squares (OLS) regression** was conducted to examine the relationship between AI adoption and workforce changes at the firm level. Using a global dataset on AI adoption and workforce impact, the model included variables such as **automation rate, company size, and levels of AI adoption**.
+
+The regression results indicate that **higher levels of AI adoption are positively associated with workforce restructuring**, particularly in roles involving routine analytical and operational tasks. While the magnitude of the effect varies across firm sizes, the findings are consistent with broader literature on AI-driven labour market transformation. These results carry implications for the **future skill requirements of professionals operating in Hong Kong's digital asset and fintech sectors**, reinforcing the importance of continuous upskilling in quantitative and technological competencies.
+
 ### 4.5 AI Ethics in Trading
 
 Drawing on Week 8's AF5T21 framework, the OpenClaw Agent incorporates:
 
 - **Transparency:** All trades explained via LIME/SHAP
-- **Accountability:** Clear responsibility chains
+- **Accountability:** Clear responsibility chains via audit logs (perception → reasoning → action)
 - **Fairness:** No front-running, no information asymmetry
-- **Privacy:** Compliant with PDPO
+- **Privacy:** Compliant with PDPO (Personal Data Privacy Ordinance)
 
 ---
 
