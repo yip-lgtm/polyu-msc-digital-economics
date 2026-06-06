@@ -1,0 +1,13 @@
+{
+  "signal_id": "fvg_2026_06_06_btc_15m_001",
+  "type": "FVG",
+  "direction": "bullish",
+  "trading_pair": "BTC-USD",
+  "timeframe": "15m",
+  "high": 68500.50,
+  "low": 68200.00,
+  "midpoint": 68350.25,
+  "volume_confirmation": true,
+  "htf_context": "discount",
+  "timestamp": "2026-06-06T15:30:00Z"
+}

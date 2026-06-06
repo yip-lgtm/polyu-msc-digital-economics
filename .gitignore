@@ -1,10 +1,8 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -26,41 +24,65 @@ wheels/
 venv/
 env/
 ENV/
-.venv/
+.venv
+.env
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-profile_default/
-ipython_config.py
-
-# Data files
-*.csv
-*.xlsx
-data/
-raw_data/
-processed_data/
-*.db
-
-# Environment
+# Environment variables
 .env
 .env.local
+.env.*.local
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Data files (large)
+*.csv
+*.tsv
+*.parquet
+!data/*.csv
+!data/sample.csv
+
+# Logs
 *.log
+logs/
 
 # OS
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
 
-# Plotly HTML (optional - keep if needed)
-# *.html
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Large files
-*.pdf
-*.zip
-!.gitkeep
+# Trading specific
+*_private_key*
+*_secret*
+*.pem
+secrets/
+signals_json/*.tmp
+execution_logs/*.log
 
-# OpenClaw
-openclaw_data/
+# Build artifacts
+node_modules/
+target/
+bin/
+obj/
 
-# Week folders pycache
-Week*/__pycache__/
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Memory and temp
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
