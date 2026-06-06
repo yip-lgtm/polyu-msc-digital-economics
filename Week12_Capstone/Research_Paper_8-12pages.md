@@ -124,7 +124,17 @@ Despite the growing literature, no paper has proposed an **integrated framework 
 
 ### 3.1 ICT Smart Money Concepts — Detailed Framework
 
-#### 3.1.1 Fair Value Gap (FVG)
+This study is grounded in the integration of two complementary theoretical and technical strands: **Inner Circle Trader (ICT) Smart Money Concepts** and the **OpenClaw autonomous AI agent architecture**, situated within the broader context of digital economics and platform theory.
+
+**Inner Circle Trader (ICT) Smart Money Concepts** provide a market microstructure framework for understanding how large institutional participants strategically influence liquidity. Core constructs include:
+
+- **Order Blocks (OB):** The last opposing candle before a strong directional move, representing institutional entry or exit zones
+- **Fair Value Gaps (FVG):** Imbalances created during rapid price movement that the market tends to revisit
+- **Liquidity Grabs:** Temporary price excursions designed to trigger retail stop losses or induce participation before the true directional move
+
+These concepts offer a structured lens for interpreting institutional intent and market structure, moving beyond purely technical indicators or fundamental analysis.
+
+#### 3.1.1 Fair Value Gap (FVG) Detection
 
 An FVG is a three-candle pattern where the high of the first candle and the low of the third candle do not overlap, creating a "gap" that institutional orders have filled.
 
@@ -157,62 +167,43 @@ An Order Block is the last opposing candle before a significant move, identified
 - Strong displacement
 - Followed by FVG creation
 
-#### 3.1.3 Liquidity Sweep
+#### 3.1.3 Liquidity Sweep (Liquidity Grab)
 
 A Liquidity Sweep occurs when price briefly breaks a key level (e.g., previous day's high) before reversing, indicating stop-loss hunting by institutions.
 
 ### 3.2 OpenClaw AI Trading Agent Architecture
 
-The **OpenClaw AI Trading Agent** is built on a multi-layer architecture:
+To operationalise these discretionary concepts into an automated, auditable system, this study adopts the **OpenClaw AI agent framework**. OpenClaw is an open-source, modular agent architecture specifically designed for real-time decision-making and execution in financial markets. Its design consists of three primary interconnected modules:
 
-#### Layer 1: Data Ingestion
-- **Real-time market data:** HashKey, OSL, Binance APIs
-- **On-chain data:** Etherscan, Solana RPC
-- **Sentiment data:** Twitter/X, news APIs
+#### 3.2.1 Perception Module
 
-#### Layer 2: Signal Generation
-- **ICT Module:** Detects FVG, OB, Liquidity Sweep
-- **ML Module:** LSTM price prediction, sentiment classification
-- **Rule-based Module:** Risk management, position sizing
+This module ingests real-time market data (price, volume, order flow) and transforms it into structured signals. In this study, the perception layer is powered by the **Python ICT Dashboard V2**, which continuously scans for Order Blocks and Fair Value Gaps. The dashboard standardises outputs into **JSON format**, enabling seamless downstream consumption by the agent.
 
-#### Layer 3: Decision Engine
-- **Reinforcement Learning Agent:** PPO/SAC algorithms
-- **Multi-objective optimization:** Return, risk, drawdown
-- **Explainability layer:** LIME/SHAP for trade rationale
+#### 3.2.2 Reasoning Module
 
-#### Layer 4: Execution
-- **Order routing:** Smart order routing across HashKey, OSL
-- **Slippage minimization:** TWAP, VWAP algorithms
-- **Risk controls:** Stop-loss, take-profit, position limits
+This module evaluates incoming signals against a set of predefined trading rules, risk parameters, and market context filters. For example, the agent may be configured to **only consider a bullish FVG valid when it coincides with an unmitigated bullish Order Block and occurs within a higher-timeframe discount array**. This rule-based reasoning layer ensures that discretionary ICT logic is translated into **deterministic, transparent, and auditable decision criteria** — a critical requirement for regulated trading environments.
 
-#### Layer 5: Monitoring
-- **Real-time dashboard:** Python ICT Dashboard V2
-- **Performance attribution:** Sharpe, Sortino, Calmar ratios
-- **Compliance:** SFC reporting, transaction monitoring
+#### 3.2.3 Action Module
 
-### 3.3 Integrated Framework
+Upon signal validation, this module executes trades through exchange APIs (or paper trading environments during development). It also manages **position sizing, stop-loss placement, and trade logging**. The modular separation between perception, reasoning, and action allows for **independent testing, debugging, and regulatory auditing** of each component.
 
-The integration of ICT + OpenClaw creates a **rule-based + AI hybrid system**:
+### 3.3 Integrated Framework: ICT + OpenClaw
 
-1. **ICT signals** provide high-probability entry/exit zones
-2. **OpenClaw AI** validates signals using ML models
-3. **Risk management** controls position sizing
-4. **Execution layer** routes orders optimally
-5. **Monitoring** ensures compliance and performance
+The integration of ICT concepts with the OpenClaw architecture creates a **hybrid human–machine trading system**. While ICT provides the market microstructure logic and institutional behavioural framework, OpenClaw supplies the execution, automation, and standardisation layer. This combination addresses a key limitation in existing literature: **the gap between conceptual understanding of institutional liquidity manipulation and practical, real-time implementation in live markets**.
+
+Furthermore, the OpenClaw framework's emphasis on **modularity, JSON-based signal standardisation, and self-hosted deployment** aligns well with Hong Kong's regulatory requirements under the Virtual Asset Trading Platform (VASP) regime. The architecture supports **auditability and compliance traceability** — features that are increasingly important as regulators scrutinise the use of algorithmic and AI-driven trading systems.
+
+The resulting theoretical model can be summarised as follows:
 
 ```
-[Market Data] → [ICT Module] → [Signal]
-       ↓
-[Sentiment/On-chain] → [ML Module] → [Validation]
-       ↓
-[Decision Engine: RL Agent] → [Trade Decision]
-       ↓
-[Risk Management] → [Position Sizing]
-       ↓
-[Execution: HashKey/OSL API] → [Order]
-       ↓
-[Monitoring: ICT Dashboard] → [Feedback Loop]
+ICT Signal Generation (Python Dashboard) 
+    → OpenClaw Perception Module 
+    → Rule-based Reasoning 
+    → Validated Action Execution 
+    → Feedback Loop for Continuous Refinement
 ```
+
+This integrated framework forms the analytical and operational backbone of the empirical analysis presented in the following sections.
 
 ---
 
