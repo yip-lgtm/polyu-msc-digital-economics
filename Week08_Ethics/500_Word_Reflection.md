@@ -22,7 +22,7 @@ In conclusion, studying Digital Economics has reinforced my belief that technica
 
 ---
 
-# 學術誠信與數字經濟倫理挑戰：香港語境下嘅反思
+# 學術誠信與數字經濟的倫理挑戰 —— 香港視角的反思
 
 **PolyU AF5T21 + AF5644 | Week 8 Reflection | 2026年6月**
 
@@ -51,3 +51,10 @@ In conclusion, studying Digital Economics has reinforced my belief that technica
 - Coursera Business Ethics Course
 - PCPD (Personal Data (Privacy) Ordinance)
 - SFC VASP Guidelines
+
+---
+
+*Note: Please replace with your own personal examples (1-2 specific cases) for authenticity. Suggested additions:*
+- *個人經歷：例如曾經見過 / 處理過嘅抄襲個案*
+- *專業案例：例如某個 Web3 項目嘅 ethical dilemma*
+- *香港實況：例如某個 PDPO 投訴案例*
