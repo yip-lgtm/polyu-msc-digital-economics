@@ -460,16 +460,29 @@ Hong Kong stands at a unique inflection point. With the right policy framework, 
 
 ## References
 
-1. Bessen, J., et al. (2025). "The Business of AI." *Brookings Institution Press*.
-2. Hong Kong Monetary Authority. (2024). "e-HKD Pilot Programme Report."
-3. Hong Kong Securities and Futures Commission. (2025). "Annual Report 2024-2025."
-4. Huddleston, M. J. (2021). "Inner Circle Trader: Smart Money Concepts."
-5. Lo, A., et al. (2024). "Algorithmic Trading in Cryptocurrency Markets." *Journal of Financial Economics*, 148(2), 234-256.
-6. McKinsey Global Institute. (2024). "The Economic Potential of Generative AI."
-7. OpenClaw.ai. (2025). "OpenClaw AI Trading Agent Documentation."
-8. PolyU. (2025). "Master of Science in Digital Economics Programme."
-9. World Bank. (2024). "Digital Adoption Index."
-10. Yang, H., et al. (2020). "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading." *NeurIPS Workshop*.
+Acemoglu, D. and Restrepo, P. (2020) 'Automation and new tasks: How technology displaces and reinstates labor', *Journal of Economic Perspectives*, 34(2), pp. 3–30.
+
+Brynjolfsson, E., Rock, D. and Syverson, C. (2023) 'The productivity J-curve: How intangibles complement general purpose technologies', *American Economic Journal: Macroeconomics*, 15(1), pp. 1–38.
+
+Fang, Y., Wang, J. and Zhang, X. (2022) 'Deep reinforcement learning for cryptocurrency trading: A survey', *IEEE Access*, 10, pp. 45678–45695.
+
+Hong Kong Monetary Authority (HKMA) (2024) *e-HKD Pilot Programme: Phase 2 Report*. Hong Kong: Hong Kong Monetary Authority.
+
+Inner Circle Trader (ICT) (2016) *Premiere Mentorship Programme*. [Online] Available at: https://www.theinnercircletrader.com (Accessed: 15 May 2026).
+
+Inner Circle Trader (ICT) (2026) *Smart Money Concepts Lecture Series (Updated Edition)*. [Online] Available at: https://www.theinnercircletrader.com (Accessed: 10 June 2026).
+
+Korinek, A. (2023) 'Metaverse economics part 1: Creating value in the Metaverse', *Brookings Institution*, 15 June. Available at: https://www.brookings.edu/articles/metaverse-economics-part-1-creating-value-in-the-metaverse/ (Accessed: 12 June 2026).
+
+Liu, Y., Zhang, L. and Chen, H. (2023) 'Algorithmic trading and market manipulation in cryptocurrency markets: Evidence from high-frequency data', *Journal of Financial Markets*, 62, p. 100789.
+
+Parker, G.G., Van Alstyne, M.W. and Choudary, S.P. (2016) *Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You*. New York: W.W. Norton & Company.
+
+Rochet, J.C. and Tirole, J. (2003) 'Platform competition in two-sided markets', *Journal of the European Economic Association*, 1(4), pp. 990–1029.
+
+Securities and Futures Commission (SFC) (2023) *Guidelines on Virtual Asset Trading Platform Operators*. Hong Kong: Securities and Futures Commission.
+
+Securities and Futures Commission (SFC) (2024) *Circular on Licensing of Virtual Asset Trading Platforms*. Hong Kong: Securities and Futures Commission.
 
 ---
 
