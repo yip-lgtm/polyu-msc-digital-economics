@@ -46,7 +46,11 @@ The convergence of traditional finance, digital asset markets, and artificial in
 
 ### 1.1 Research Background
 
-The global digital asset market has grown from approximately US$200 billion in 2020 to over US$2.5 trillion in 2025, driven by institutional adoption, the approval of spot Bitcoin and Ethereum ETFs in Hong Kong and the United States (2024), and the emergence of Web3 ecosystems. Hong Kong, in particular, has positioned itself as a leading Web3 hub with the implementation of the Virtual Asset Service Provider (VASP) licensing regime (June 2023), the Stablecoin Ordinance (2025), and progressive e-HKD CBDC trials.
+The rapid growth of Hong Kong's Web3 ecosystem, supported by the government's 2023-2026 policy initiatives and the introduction of the Virtual Asset Trading Platform (VASP) licensing regime, has created new market structures in digital assets. This research applies **Inner Circle Trader (ICT) Smart Money Concepts** — originally taught in the 2016 Premiere Mentorship and updated in the 2026 Smart Money Lectures — together with the **OpenClaw open-source AI agent framework** to analyse how institutional "Smart Money" manipulates liquidity in cryptocurrency markets and how autonomous agents can execute ICT-based strategies in real time.
+
+By integrating PolyU's Digital Economics curriculum (AF5644, AF5640, AF5645), this paper demonstrates how ICT models combined with OpenClaw agents can enhance both the understanding and practical execution of digital transformation in finance.
+
+The global digital asset market has grown from approximately US$200 billion in 2020 to over US$2.5 trillion in 2025, driven by institutional adoption, the approval of spot Bitcoin and Ethereum ETFs in Hong Kong and the United States (2024), and the emergence of Web3 ecosystems. Hong Kong, in particular, has positioned itself as a leading Web3 hub with the implementation of the VASP licensing regime (June 2023), the Stablecoin Ordinance (2025), and progressive e-HKD CBDC trials.
 
 Simultaneously, algorithmic trading has evolved from rule-based systems to sophisticated AI-driven agents. The **OpenClaw AI Trading Agent** represents a new generation of autonomous execution systems that combine multi-source market data, technical analysis (including ICT Smart Money Concepts), and reinforcement learning to identify and execute high-probability trading opportunities.
 
