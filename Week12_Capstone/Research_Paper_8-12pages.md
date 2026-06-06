@@ -393,28 +393,36 @@ Based on the findings of this study, the following recommendations are proposed 
 #### For Industry Participants (VASP Platforms and Trading Firms)
 
 6. **Invest in Hybrid Human–Machine Trading Capabilities**
-   Firms should recognise that the most effective deployment of AI in trading is often a hybrid model, where ICT-style discretionary reasoning is augmented (not replaced) by automated execution. OpenClaw-style architectures offer a practical blueprint for this hybrid approach.
+   Rather than viewing AI as a complete replacement for human expertise, firms should explore **hybrid models that combine institutional market knowledge (such as ICT Smart Money Concepts) with automated execution systems**. This approach may offer both competitive advantage and regulatory defensibility. OpenClaw-style architectures offer a practical blueprint for this hybrid approach.
 
-7. **Adopt ICT + OpenClaw Framework**
+7. **Prioritise Talent Development in Quantitative and AI Skills**
+   The findings on AI adoption and workforce transformation suggest that professionals in Hong Kong's virtual asset sector will **increasingly require competencies in data analysis, algorithmic thinking, and AI system oversight**. Industry players are encouraged to collaborate with educational institutions, including PolyU, to develop targeted training programmes.
+
+8. **Adopt ICT + OpenClaw Framework**
    VASP-licensed platforms (HashKey, OSL, etc.) should consider integrating ICT signal detection into their product offerings, either as analytics tools for institutional clients or as embedded features of API execution services.
 
-8. **Invest in Compliance Infrastructure**
+9. **Invest in Compliance Infrastructure**
    Build modular compliance tools that match the modular architecture of trading systems, ensuring that auditability, explainability, and risk controls are first-class design considerations.
 
 #### For Academia and Industry Collaboration
 
-9. **Establish Web3 + AI Research Center at HKUST / PolyU / HKU**
-   Fund a dedicated research centre focused on the intersection of AI, market microstructure, and digital assets, providing ongoing empirical evidence to inform regulatory and industry practice.
+10. **Establish Web3 + AI Research Center at HKUST / PolyU / HKU**
+    Fund a dedicated research centre focused on the intersection of AI, market microstructure, and digital assets, providing ongoing empirical evidence to inform regulatory and industry practice.
 
-10. **Talent Attraction Programme**
+11. **Talent Attraction Programme**
     Target the attraction of 10,000 Web3 + AI professionals to Hong Kong by 2030, through scholarships, immigration facilitation, and industry-academia partnerships.
 
-11. **Open-Source Ecosystem Development**
+12. **Open-Source Ecosystem Development**
     Encourage open-source contributions (similar to OpenClaw) for AI trading infrastructure, lowering the barrier to entry and fostering a vibrant developer community.
+
+#### For Hong Kong's Broader Web3 Ecosystem
+
+13. **Position Hong Kong as a Centre for Responsible AI-Augmented Trading**
+    By proactively developing regulatory frameworks and talent pipelines that support the **responsible integration of traditional trading methodologies with AI systems**, Hong Kong can differentiate itself from other regional hubs and strengthen its position as a trusted, well-regulated Web3 centre.
 
 #### For InnovateHK and Government
 
-12. **Fund OpenClaw-Style Platforms**
+14. **Fund OpenClaw-Style Platforms**
     Provide HK$200M+ in grants for AI + Web3 infrastructure projects, with priority for those that demonstrate alignment with regulatory best practices and contribute to Hong Kong's Web3 hub status.
 
 ### 6.3 Limitations
