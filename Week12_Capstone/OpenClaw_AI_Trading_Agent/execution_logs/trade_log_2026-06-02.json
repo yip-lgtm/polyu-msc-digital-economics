@@ -1,0 +1,21 @@
+[
+  {
+    "trade_id": "trade_2026-06-02_001",
+    "signal_id": "ob_2026_06_02_eth_1h_001",
+    "timestamp": "2026-06-02T11:00:00Z",
+    "direction": "long",
+    "entry_price": 3450.00,
+    "stop_loss": 3400.00,
+    "take_profit": [3500.00, 3550.00, 3600.00],
+    "position_size_usd": 5000,
+    "reasoning": [
+      "Bullish OB at HTF demand",
+      "FVG confluence confirmed",
+      "London session",
+      "R:R = 2.0:1"
+    ],
+    "status": "CLOSED",
+    "exit_price": 3500.00,
+    "pnl_usd": 72.46
+  }
+]

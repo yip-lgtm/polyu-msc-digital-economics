@@ -1,0 +1,21 @@
+[
+  {
+    "trade_id": "trade_2026-06-01_001",
+    "signal_id": "fvg_2026_06_01_btc_15m_001",
+    "timestamp": "2026-06-01T15:30:00Z",
+    "direction": "long",
+    "entry_price": 68200.00,
+    "stop_loss": 66100.00,
+    "take_profit": [70500.00, 72500.00, 74500.00],
+    "position_size_usd": 5000,
+    "reasoning": [
+      "Bullish FVG in discount array",
+      "Confluence with unmitigated OB",
+      "London session overlap",
+      "R:R = 2.5:1"
+    ],
+    "status": "CLOSED",
+    "exit_price": 70500.00,
+    "pnl_usd": 168.50
+  }
+]

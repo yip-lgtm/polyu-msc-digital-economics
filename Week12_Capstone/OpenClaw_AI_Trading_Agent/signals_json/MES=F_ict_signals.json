@@ -1,0 +1,13 @@
+{
+  "signal_id": "ob_2026_06_06_mes_h1_001",
+  "type": "OB",
+  "direction": "bullish",
+  "trading_pair": "MES=F",
+  "timeframe": "1h",
+  "high": 5280.00,
+  "low": 5180.00,
+  "midpoint": 5230.00,
+  "volume_confirmation": true,
+  "htf_context": "discount",
+  "timestamp": "2026-06-06T15:00:00Z"
+}

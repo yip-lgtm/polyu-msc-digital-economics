@@ -1,0 +1,99 @@
+# Agent Configuration (YAML)
+
+```yaml
+# OpenClaw AI Trading Agent Configuration
+# Last updated: 2026-06-06
+# Version: 2.1.0
+
+agent:
+  name: "OpenClaw ICT Agent"
+  version: "2.1.0"
+  mode: "paper_trading"  # paper_trading | live_trading
+  log_level: "INFO"
+  
+exchange:
+  name: "HashKey"
+  api_endpoint: "https://api.hashkey.com"
+  websocket_endpoint: "wss://ws.hashkey.com"
+  rate_limit: 10  # requests/second
+  testnet: false
+  
+trading_pairs:
+  - "BTC-USD"
+  - "ETH-USD"
+  - "SOL-USD"
+  - "MES=F"  # Micro E-mini Nasdaq futures (macro proxy)
+
+ict_signals:
+  fair_value_gap:
+    enabled: true
+    min_gap_size: 0.5  # % of price
+    max_age_days: 14
+    timeframes: ["15m", "1h", "4h"]
+    
+  order_block:
+    enabled: true
+    min_volume_multiplier: 1.5  # x 20d average
+    min_displacement_atr: 1.0
+    
+  liquidity_sweep:
+    enabled: true
+    min_sweep_depth: 0.3  # % beyond level
+    reversal_candles: 3
+
+reasoning:
+  entry_conditions:
+    - "bullish_fvg_AND_unmitigated_bullish_ob"
+    - "within_htf_discount"
+    - "min_risk_reward: 2.0"
+    - "session: london_or_ny"
+    
+  exit_conditions:
+    stop_loss: "1.5_atr"
+    take_profit_levels: [1.0, 2.0, 3.0]  # R multiples
+    partial_close_pcts: [0.33, 0.33, 0.34]
+    
+  filters:
+    min_volume: "1.2x_20d_avg"
+    max_spread: 0.05  # %
+    no_news_window: 30  # minutes
+
+risk_management:
+  position_sizing:
+    method: "fractional_kelly"
+    kelly_fraction: 0.25  # 1/4 Kelly
+    max_position_pct: 0.10  # 10% of portfolio
+    max_total_exposure: 0.30  # 30%
+    
+  drawdown_protection:
+    max_daily_loss: 0.02
+    max_weekly_loss: 0.05
+    max_monthly_loss: 0.10
+    auto_pause_drawdown: 0.08  # Pause if reached
+
+compliance:
+  sfc_vasp:
+    enabled: true
+    audit_trail: true
+    transaction_monitoring: true
+  pdpo:
+    enabled: true
+    data_retention_years: 7
+  audit:
+    decision_log_retention: "7_years"
+    trade_log_retention: "7_years"
+```
+
+## Environment Variables (.env)
+
+```bash
+HASHKEY_API_KEY=your_key_here
+HASHKEY_SECRET=your_secret_here
+OPENCLAW_GATEWAY_URL=https://gateway.openclaw.ai
+LOG_LEVEL=INFO
+ENVIRONMENT=production
+```
+
+---
+
+*Configuration aligned with ICT methodology + HK VASP regulations*
