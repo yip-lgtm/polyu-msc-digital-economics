@@ -39,7 +39,7 @@ except FileNotFoundError:
     }
     df = pd.DataFrame(data)
     # 模擬 Workforce_Change
-    # 將類別編碼
+    # 將類別編碼（內部使用，唔納入 X）
     df['AI_Adoption_Level_Code'] = df['AI_Adoption_Level'].map({'Low': 0, 'Medium': 1, 'High': 2})
     df['Workforce_Change'] = (
         0.8 * df['AI_Adoption_Level_Code']
@@ -47,6 +47,8 @@ except FileNotFoundError:
         + 0.00001 * df['Company_Size']
         + np.random.normal(0, 1, n)
     )
+    # 刪除內部編碼變量（避免 multicollinearity）
+    df = df.drop(columns=['AI_Adoption_Level_Code'])
 
 print("\n========== 數據預覽 ==========")
 print(df.head(10))
@@ -62,8 +64,14 @@ print(f"清理後: {df.shape[0]} 筆")
 
 # 將類別變數轉 dummy
 df = pd.get_dummies(df, columns=['AI_Adoption_Level'], drop_first=True)
+# 確保所有數值變量都是 float
+for col in df.columns:
+    if df[col].dtype == 'bool':
+        df[col] = df[col].astype(float)
 print(f"\nDummy 變量:")
 print([c for c in df.columns if 'AI_Adoption_Level' in c])
+print(f"\n數據類型:")
+print(df.dtypes)
 
 # ============================================================
 # 3. 定義變量
@@ -71,8 +79,8 @@ print([c for c in df.columns if 'AI_Adoption_Level' in c])
 print("\n========== 3. 變量定義 ==========")
 y = df['Workforce_Change']
 
-# 自動偵測 dummy 變量
-dummy_cols = [c for c in df.columns if c.startswith('AI_Adoption_Level_')]
+# 自動偵測 dummy 變量（只取 Medium 同 High，Low 為 baseline）
+dummy_cols = [c for c in df.columns if c.startswith('AI_Adoption_Level_') and c != 'AI_Adoption_Level_Low']
 X_cols = ['Automation_Rate', 'Company_Size'] + dummy_cols
 X = df[X_cols]
 X = sm.add_constant(X)
