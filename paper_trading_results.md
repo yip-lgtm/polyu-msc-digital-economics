@@ -70,3 +70,24 @@ The conservative risk setting (0.75% per trade) successfully limited the maximum
 
 | Area | Current Limitation | Planned Improvement |
 |-------------------------|---------------------------------------------|-----------------------------------------|
+| Session Filter | No distinction between London/NY/Asian session | Add session-based filters |
+| Volatility Filter | No volatility adjustment | Add ATR-based position sizing |
+| News Avoidance | Trades can be taken during high-impact news | Integrate economic calendar filter |
+| Win Rate vs Frequency | Conservative rules → fewer trades | Explore slight relaxation with stronger filters |
+| Live Execution | Currently paper trading only | Integrate with HashKey / OSL API |
+
+---
+
+## Conclusion
+
+The 15-day paper trading test demonstrates that the OpenClaw AI Trading Agent, when guided by well-defined ICT Smart Money rules, can achieve positive results with controlled risk. The system shows particular strength when multiple ICT concepts (Order Block + FVG + Higher Timeframe Bias) align.
+
+While the current win rate of 66.7% is encouraging, the relatively small sample size (12 trades) means further testing over a longer period is necessary. The modular architecture provides a solid foundation for future enhancements, including live trading integration and more sophisticated risk management.
+
+Overall, this paper trading phase successfully validated the core concept of combining ICT Smart Money Concepts with an autonomous AI agent framework, and provides a practical base for further development in Hong Kong's regulated Web3 trading environment.
+
+---
+
+Test Conducted By: Saba 
+Date: June 2026 
+Status: Paper Trading Phase Completed
