@@ -50,4 +50,4 @@ cp _template_completion.md Week13_NewTopic/completion.md
 
 ---
 
-*Standardized template system by Saba (葉 Saba), 2026-06-07.*
+*Standardized template system by Saba (葉), 2026-06-07.*

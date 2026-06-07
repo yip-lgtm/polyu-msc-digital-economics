@@ -1,7 +1,7 @@
 # 🧠 SOUL.md — OpenClaw AI Trading Agent
 
 > **Defining the personality, philosophy, and principles of the OpenClaw AI Trading Agent**
-> **Version 1.0 | 2026-06-07 | Author: Saba (葉 Saba)**
+> **Version 1.0 | 2026-06-07 | Author: Saba (葉)**
 > **Reference: paper_trading_results.md (15-day validation: 66.7% WR, +4.8% P&L, -2.1% DD)**
 
 ---
@@ -157,5 +157,5 @@ Until then, I am a **proof of concept** — and I will not pretend otherwise.
 
 ---
 
-*OpenClaw AI Trading Agent — v1.0 — Built by Saba (葉 Saba) for the Hong Kong Web3 ecosystem.*
+*OpenClaw AI Trading Agent — v1.0 — Built by Saba (葉) for the Hong Kong Web3 ecosystem.*
 *MIT Licensed. Open source. Critique welcome.*

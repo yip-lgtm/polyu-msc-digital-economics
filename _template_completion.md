@@ -3,7 +3,7 @@
 > **PolyU MSc Digital Economics Self-Study | 12-Week Intensive**
 > **Week XX: [Topic Name]**
 > **Status: ✅ Completed | Date: [YYYY-MM-DD]**
-> **Student: Saba (葉 Saba) | ID: yipsaba@polyu-msc.ai**
+> **Student: Saba (葉) | ID: yipsaba@polyu-msc.ai**
 
 ---
 
