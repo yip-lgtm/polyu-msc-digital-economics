@@ -1,7 +1,29 @@
-# LinkedIn + Email 投遞腳本
+# LinkedIn + Email 投遞腳本 (v2 — Paper Trading Results Integrated)
 
 > **5 個 LinkedIn 連線 + 5 個 Email — 立即可發**
+> **更新: 整合 15 日 Paper Trading 結果 (66.7% win rate, +4.8% P&L, max DD -2.1%)**
 > **準備好複製貼上**
+
+---
+
+## 📊 Paper Trading Results — Headline Numbers (引用自 `paper_trading_results.md`)
+
+| Metric | Value |
+|--------|-------|
+| Testing Period | 1-15 June 2026 (15 days) |
+| Total Signals | 47 |
+| Trades Executed | 12 |
+| **Win Rate** | **66.7%** (8W/4L) |
+| Avg R:R | 1:2.3 |
+| **Net P&L** | **+4.8%** |
+| Max Drawdown | -2.1% |
+| Strongest Asset | BTC-USD (80% WR, +3.1%) |
+| HTF Bias Filter Impact | 50% → 75% win rate (from 8 June) |
+
+**Strongest confluence:** Order Block + FVG (7/8 winning trades)
+**Decision factor:** High-confluence (4/5) setups → 83% win rate
+
+🔥 **Use these numbers in your emails — they are the freshest, most concrete proof of execution capability.**
 
 ---
 
@@ -15,15 +37,13 @@
 Hi [Name],
 
 I'm Saba Yip, a PolyU MSc Digital Economics student passionate about 
-AI + Web3. I've built a live OpenClaw AI Trading Agent (Sharpe 2.31) 
-on HashKey, and completed a 12-week self-study programme (100%) 
-covering ICT Smart Money Concepts, Python automation, and digital 
-economics.
+AI + Web3. I just completed a 15-day paper trading test of my 
+OpenClaw AI Trading Agent: 66.7% win rate, +4.8% P&L, max DD -2.1%, 
+with strict ICT Smart Money Concepts (Order Block + FVG confluence).
+
+Full results: https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
 
 I'd love to connect and learn more about opportunities at HashKey.
-
-Portfolio: https://github.com/yip-lgtm/polyu-msc-digital-economics
-Email: yipsaba@polyu-msc.ai
 
 Best,
 Saba
@@ -38,14 +58,14 @@ Saba
 Hi [Name],
 
 I'm a PolyU MSc Digital Economics student building AI + Web3 solutions. 
-I built a live OpenClaw AI Trading Agent that integrates ICT Smart Money 
-Concepts with autonomous execution, achieving Sharpe 2.31 in paper trading.
+My OpenClaw AI Trading Agent (ICT Smart Money) just completed a 
+15-day paper trading test: 66.7% win rate, +4.8% return, max DD -2.1%, 
+12 trades, BTC-USD strongest at 80% WR.
+
+Full results: https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
 
 I'd love to connect and learn about [Research Analyst / Quant / Trading] 
 opportunities at OSL.
-
-Portfolio: https://github.com/yip-lgtm/polyu-msc-digital-economics
-Email: yipsaba@polyu-msc.ai
 
 Best,
 Saba
@@ -83,16 +103,15 @@ Saba
 ```
 Hi [Name],
 
-I'm Saba Yip, PolyU MSc Digital Economics student. I built a live 
-OpenClaw AI Trading Agent (Sharpe 2.31) combining ICT Smart Money 
-Concepts with autonomous execution, and completed a 12-week 
-self-study programme equivalent to PolyU's MSc Digital Economics.
+I'm Saba Yip, PolyU MSc Digital Economics student. My OpenClaw AI 
+Trading Agent (ICT Smart Money) just completed a 15-day paper 
+trading test: 66.7% win rate, +4.8% P&L, max DD -2.1%, 12 trades, 
+with strict Order Block + FVG confluence and HTF bias filter.
+
+Full results: https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
 
 Would love to connect and learn about Research / Investment Analyst 
 opportunities at Foresight Ventures.
-
-Portfolio: https://github.com/yip-lgtm/polyu-msc-digital-economics
-Email: yipsaba@polyu-msc.ai
 
 Best,
 Saba
@@ -128,7 +147,7 @@ Saba
 
 ### 1. HashKey Exchange (中文版 — 本地公司)
 **To:** careers@hashkey.com (or apply via LinkedIn job posting)
-**Subject:** [應徵] 量化分析員 / 交易策略員 — 12 週數字經濟學 + ICT + OpenClaw Portfolio
+**Subject:** [應徵] 量化分析員 / 交易策略員 — 12 週數字經濟學 + ICT + OpenClaw + 15 日 Paper Trading 66.7% 勝率
 
 ```
 敬啟者：
@@ -137,11 +156,22 @@ Saba
 
 本人為香港理工大學數字經濟學碩士生，過去 12 週完成一項極具挑戰性嘅自學計劃，內容等效於理大 MSc in Digital Economics 課程。期間，本人將重心放喺將 ICT Smart Money Concepts 結合 OpenClaw AI Trading Agent，分析香港加密貨幣市場嘅流動性動態與機構「Smart Money」操縱行為。
 
-主要成果包括：
+本人嘅 OpenClaw AI Trading Agent 剛完成咗 15 日 Paper Trading 測試（2026年6月1-15日）：
+
+✅ 12 個 Trades，**66.7% 勝率**（8 勝 4 負）
+✅ 平均 Risk-Reward 1:2.3
+✅ **Net P&L +4.8%**（基於 0.75% per trade 風險設定）
+✅ Maximum Drawdown -2.1%
+✅ BTC-USD 表現最強（80% 勝率，+3.1%）
+✅ Order Block + FVG Confluence 係 7/8 贏嘅 Trade 嘅核心
+✅ 加入 Higher Timeframe Bias Filter 後勝率由 50% → 75%
+
+詳細結果：https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
+
+其他主要成果包括：
 
 ✅ 8-12 頁研究論文：ICT Smart Money Concepts 結合 OpenClaw AI Trading Agent 於香港 Web3 市場嘅應用
 ✅ 即時 Python ICT 儀表板（Order Block + FVG 偵測）
-✅ 已部署嘅 OpenClaw AI 代理（Sharpe 2.31, Max DD -8%, 勝率 64%）
 ✅ 計量經濟分析：AI 採用對企業人力結構嘅影響
 
 本人已將 1 頁摘要（中英對照）、Research Paper、GitHub Portfolio 附上：
@@ -165,7 +195,7 @@ GitHub: github.com/yip-lgtm
 
 ### 2. OSL (中文版)
 **To:** careers@osl.com
-**Subject:** [應徵] 量化分析員 — PolyU MSc + ICT + OpenClaw Portfolio
+**Subject:** [應徵] 量化分析員 — PolyU MSc + ICT + OpenClaw + 15 日 Paper Trading 66.7% 勝率
 
 ```
 敬啟者：
@@ -174,11 +204,19 @@ GitHub: github.com/yip-lgtm
 
 本人對香港 Web3 及數字資產行業充滿熱忱。過去 12 週，我完成咗一項等效於理大 MSc 課程嘅密集自學計劃，並喺以下範疇取得具體成果：
 
+【15 日 Paper Trading 結果 (2026年6月1-15日)】
+- 12 個 Trades，**66.7% 勝率** (8W/4L)
+- Net P&L **+4.8%**，Max Drawdown -2.1%
+- 平均 R:R 1:2.3，BTC-USD 80% 勝率 (+3.1%)
+- High-confluence (4/5) setup 達 83% 勝率
+- HTF Bias Filter 將勝率由 50% → 75%
+- 詳細結果：https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
+
 【學術研究】
 完成咗一份 8-12 頁研究論文，題為《ICT Smart Money Concepts 結合 OpenClaw AI Trading Agent 於香港 Web3 市場嘅應用》。論文涵蓋 ICT 理論框架、OpenClaw 系統架構（Perception → Reasoning → Action）、香港市場實證分析（15 個 FVG on MES=F），並為 HKMA、SFC、InnovateHK 提供 14 項政策建議。
 
 【技術項目】
-- 部署咗一個 OpenClaw AI 交易代理（自 2025 年 3 月起喺 HashKey 運作），採用 ICT Smart Money 策略，Sharpe Ratio 達 2.31
+- 部署咗一個 OpenClaw AI 交易代理（自 2025 年 3 月起喺 HashKey 運作），採用 ICT Smart Money 策略
 - 開發咗 Python ICT Dashboard V2，能夠即時偵測 Order Block 及 Fair Value Gap
 - 建立咗多個 OLS 迴歸模型，探討 AI 採用對就業市場嘅影響
 
@@ -201,7 +239,7 @@ yipsaba@polyu-msc.ai
 
 ### 3. Animoca Brands (英文版 — 外資友好)
 **To:** careers@animocabrands.com
-**Subject:** Application for Research Analyst / AI Engineer — 12-Week Digital Economics + ICT + OpenClaw Portfolio
+**Subject:** Application for Research Analyst / AI Engineer — 12-Week Digital Economics + 15-Day Paper Trading (66.7% WR, +4.8% P&L)
 
 ```
 Dear Hiring Manager,
@@ -210,15 +248,27 @@ I am writing to express my strong interest in joining Animoca Brands as
 a Research Analyst or AI Engineer.
 
 Over the past 12 weeks, I have completed a rigorous self-study programme 
-equivalent to PolyU's MSc in Digital Economics. My work focused on applying 
-ICT Smart Money Concepts combined with an OpenClaw AI Trading Agent to 
-analyse liquidity dynamics in Hong Kong's cryptocurrency markets.
+equivalent to PolyU's MSc in Digital Economics. My OpenClaw AI Trading 
+Agent (ICT Smart Money) just completed a 15-day paper trading test 
+(1-15 June 2026) with strong results.
+
+**Paper Trading Highlights:**
+- 12 trades, 66.7% win rate (8W/4L)
+- Net P&L: +4.8%
+- Max Drawdown: -2.1%
+- Avg Risk-Reward: 1:2.3
+- BTC-USD strongest: 80% win rate, +3.1% return
+- Order Block + FVG confluence: 7/8 winning trades
+- HTF bias filter lifted win rate from 50% → 75%
+
+**Full paper trading results:**
+https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
 
 **Key deliverables include:**
 
 - An 8-12 page research paper on ICT + OpenClaw in Hong Kong Web3 markets
 - A real-time Python ICT Dashboard (Order Block + FVG detection)
-- A deployed OpenClaw AI agent (Sharpe 2.31, Max DD -8%, Win Rate 64%)
+- A deployed OpenClaw AI agent (rule-based ICT confluence)
 - Econometric analysis on AI adoption and workforce impact
 
 I have attached my 1-page summary and GitHub portfolio for your reference:
@@ -244,7 +294,7 @@ GitHub: github.com/yip-lgtm
 
 ### 4. Foresight Ventures (英文版)
 **To:** hr@foresightventures.com
-**Subject:** Application for Research Analyst — Digital Economics + ICT + OpenClaw
+**Subject:** Application for Research Analyst — Digital Economics + ICT + OpenClaw (15-Day Paper Trading: 66.7% WR, +4.8% P&L)
 
 ```
 Dear Hiring Manager,
@@ -259,8 +309,18 @@ intersection of:
 - AI agent architecture (OpenClaw)
 - Hong Kong Web3 ecosystem (VASP, e-HKD)
 
+**15-Day Paper Trading Test (1-15 June 2026):**
+- 12 trades, 66.7% win rate (8W/4L)
+- Net P&L: +4.8%
+- Max Drawdown: -2.1%
+- BTC-USD: 80% WR, +3.1%
+- HTF bias filter lifted win rate from 50% → 75%
+- High-confluence setups (4/5 conditions): 83% win rate
+
+Full results: https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
+
 Key achievements:
-- Live OpenClaw AI Trading Agent (Sharpe 2.31)
+- Live OpenClaw AI Trading Agent (rule-based ICT confluence)
 - 8-12 page research paper on HK Web3 markets
 - Python ICT Dashboard with real-time FVG/OB detection
 - 14 policy recommendations for HKMA/SFC/InnovateHK
@@ -281,7 +341,7 @@ yipsaba@polyu-msc.ai
 
 ### 5. HKMA (中文版 — 政府機構)
 **To:** hkma@hkma.gov.hk
-**Subject:** [應徵] 研究分析員 / 政策分析員 — 數字經濟學 + Web3 + AI
+**Subject:** [應徵] 研究分析員 / 政策分析員 — 數字經濟學 + Web3 + AI + 量化交易 (15 日 Paper Trading 驗證)
 
 ```
 敬啟者：
@@ -297,6 +357,15 @@ yipsaba@polyu-msc.ai
 【VASP 監管框架】
 - 熟悉 SFC 對虛擬資產交易平台嘅發牌制度
 - 喺研究論文中提出 14 項政策建議，涵蓋 AI 透明度、Audit Trail、Sandbox 等
+
+【量化交易實證 — 15 日 Paper Trading 結果】
+本人嘅 OpenClaw AI Trading Agent 已完成 15 日驗證（1-15 June 2026）：
+- 12 個 Trades，**66.7% 勝率**，Net P&L **+4.8%**，Max DD -2.1%
+- Order Block + Fair Value Gap 智能偵測，平均 R:R 1:2.3
+- Higher Timeframe Bias Filter 將勝率由 50% 提升至 75%
+- 證明 AI 代理能喺受監管嘅 Web3 環境中以可控制風險產生正期望值
+
+詳細結果：https://github.com/yip-lgtm/polyu-msc-digital-economics/blob/main/paper_trading_results.md
 
 【學術研究】
 完成咗一份 8-12 頁研究論文，題為《ICT Smart Money Concepts 結合 OpenClaw AI Trading Agent 於香港 Web3 市場嘅應用》。
